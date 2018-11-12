@@ -1,0 +1,90 @@
+{
+  "name": "@entria/deploy",
+  "description": "Entria deploy helpers",
+  "version": "0.0.1",
+  "author": {
+    "name": "Entria",
+    "email": "dev@entria.com.br",
+    "url": "https://github.com/entria"
+  },
+  "bin": {
+    "entria-deploy": "./bin/cli"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "execa": "^1.0.0",
+    "yargs": "^12.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-async-generators": "^7.0.0",
+    "@babel/plugin-transform-async-to-generator": "^7.0.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@types/execa": "^0.9.0",
+    "@types/find-up": "^2.1.1",
+    "@types/fs-extra": "^5.0.4",
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.5",
+    "@types/temp-write": "^3.3.0",
+    "@types/tempy": "^0.2.0",
+    "@types/touch": "^3.1.1",
+    "@types/yargs": "^12.0.1",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "^23.6.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-typescript": "^1.0.2",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-typescript": "^0.12.0",
+    "find-up": "^3.0.0",
+    "fs-extra": "^7.0.1",
+    "jest": "^23.6.0",
+    "jest-junit": "^5.2.0",
+    "temp-write": "^3.4.0",
+    "tempy": "^0.2.1",
+    "touch": "^3.1.0"
+  },
+  "jsnext:main": "src/index.ts",
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "yarn prettier",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "yarn prettier",
+      "git add"
+    ],
+    "*.yml": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "main": "lib/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entria/entria-deploy"
+  },
+  "scripts": {
+    "build": "rm -rf lib/* && babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir lib",
+    "prepublish": "npm run build",
+    "shouldDeploy": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" src/shouldDeploy.ts",
+    "test": "jest",
+    "test:watch": "jest --watch --coverage"
+  }
+}
