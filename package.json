@@ -83,7 +83,7 @@
   "main": "lib/index.ts",
   "publishConfig": {
     "access": "public"
-  },gi
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/entria/entria-deploy"
