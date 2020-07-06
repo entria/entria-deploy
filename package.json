@@ -97,6 +97,7 @@
     "shouldDeploy": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" src/shouldDeploy.ts",
     "test": "jest",
     "test:watch": "jest --watch --coverage",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "watch": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir lib --watch"
   }
 }

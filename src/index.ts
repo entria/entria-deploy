@@ -1,5 +1,2 @@
-import { shouldDeployPackage } from './shouldDeploy';
-
-export {
-  shouldDeployPackage,
-}
+export { shouldDeployPackage } from './shouldDeploy';
+export { changedPaths } from './changedPaths';

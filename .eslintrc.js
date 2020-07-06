@@ -90,8 +90,6 @@ module.exports = {
     ],
   },
   plugins: [
-    'flowtype',
-    'react',
     'import',
     '@typescript-eslint',
     'no-only-tests',

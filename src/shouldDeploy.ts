@@ -9,7 +9,7 @@ CIRCLE_COMPARE_URL=https://github.com/owner/repo/compare/9324164e3f51...8aaaec63
 */
 import execa from 'execa';
 
-const gitDiff = (cwd: string, ...args: string[]) => {
+export const gitDiff = (cwd: string, ...args: string[]) => {
   return execa('git', ['diff', ...args], { cwd });
 };
 
