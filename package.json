@@ -91,9 +91,9 @@
   "scripts": {
     "build": "rm -rf lib/* && babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir lib",
     "prepublish": "npm run build",
-    "release:major": "npm run check && npm version major && git push --follow-tags",
-    "release:minor": "npm run check && npm version minor && git push --follow-tags",
-    "release:patch": "npm run check && npm version patch && git push --follow-tags",
+    "release:major": "yarn test && npm version major && git push --follow-tags",
+    "release:minor": "yarn test && npm version minor && git push --follow-tags",
+    "release:patch": "yarn test && npm version patch && git push --follow-tags",
     "shouldDeploy": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" src/shouldDeploy.ts",
     "test": "jest",
     "test:watch": "jest --watch --coverage",
