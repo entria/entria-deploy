@@ -2,9 +2,10 @@ import { getCommitRange, gitDiff } from './shouldDeploy';
 
 // return paths that changed in the compare url
 export const changedPaths = async (
-  compareUrl: string
+  compareUrl: string,
+  baseRef?: string,
                                    ): Promise<string[]> => {
-  const commitRange = getCommitRange(compareUrl);
+  const commitRange = getCommitRange(compareUrl, baseRef);
 
   if (!commitRange) {
     return [];

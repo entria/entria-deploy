@@ -2,11 +2,15 @@ import { getCommitRange, shouldDeployPackage } from '../shouldDeploy';
 
 export const command = 'hasChanged <compareUrl> [paths..]';
 export const desc = 'check if given paths were changed';
-export const builder = {};
+export const builder = {
+  baseRef: {
+    description: 'baseUrl to compare to',
+  },
+};
 export const handler = async (argv) => {
-  const { compareUrl, paths } = argv;
+  const { compareUrl, baseRef, paths } = argv;
 
-  const commitRange = getCommitRange(compareUrl);
+  const commitRange = getCommitRange(compareUrl, baseRef);
 
   if (!commitRange) {
     console.log('no commit range');
