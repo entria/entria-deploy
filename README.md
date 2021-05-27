@@ -20,7 +20,7 @@ Add CIRCLECI_COMPARE_URL environment to your .circleci/config.yml
 
 ```jsx
 environment:
-    CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>...<<pipeline.git.revision>>
+    CIRCLECI_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>...<<pipeline.git.revision>>
 ```
 
 ### Get files to be tested by jest
