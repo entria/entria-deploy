@@ -1,4 +1,5 @@
-import '@babel/polyfill';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import yargs from 'yargs';
 import * as changedPath from './commands/changedPaths';
 import * as hasChanged from './commands/hasChanged';
