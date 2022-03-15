@@ -6,7 +6,7 @@ module.exports = {
   coverageReporters: ['lcov', 'html'],
   reporters: ['default', 'jest-junit'],
   transform: {
-    '^.+\\.(js|ts|tsx)?$': '<rootDir>/test/babel-transformer',
+    '^.+\\.(js|ts|tsx)?$': 'babel-jest',
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts|tsx)?$',
   moduleFileExtensions: ['ts', 'js', 'tsx'],
