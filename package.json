@@ -1,7 +1,7 @@
 {
   "name": "@entria/deploy",
   "description": "Entria deploy helpers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Entria",
     "email": "dev@entria.com.br",
