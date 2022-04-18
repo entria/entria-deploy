@@ -57,7 +57,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-typescript": "0.14.0",
     "find-up": "6.3.0",
-    "fs-extra": "10.0.1",
+    "fs-extra": "10.1.0",
     "jest": "27.5.1",
     "jest-junit": "13.1.0",
     "temp-write": "4.0.0",
