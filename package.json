@@ -28,7 +28,7 @@
     "@babel/plugin-syntax-async-generators": "7.8.4",
     "@babel/plugin-transform-async-to-generator": "7.17.12",
     "@babel/plugin-transform-flow-strip-types": "7.17.12",
-    "@babel/preset-env": "7.18.0",
+    "@babel/preset-env": "7.18.2",
     "@babel/preset-typescript": "7.17.12",
     "@types/babel-core": "6.25.7",
     "@types/babel__core": "7.1.19",
