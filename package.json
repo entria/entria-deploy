@@ -15,7 +15,7 @@
     "core-js": "^3.21.1",
     "execa": "4.0.2",
     "regenerator-runtime": "^0.13.9",
-    "yargs": "17.5.1"
+    "yargs": "17.6.0"
   },
   "devDependencies": {
     "@babel/cli": "7.19.3",
