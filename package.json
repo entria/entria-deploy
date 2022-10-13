@@ -39,7 +39,7 @@
     "@types/find-up": "4.0.0",
     "@types/fs-extra": "9.0.13",
     "@types/jest": "27.5.1",
-    "@types/node": "18.8.4",
+    "@types/node": "18.8.5",
     "@types/temp-write": "4.0.0",
     "@types/tempy": "0.3.0",
     "@types/touch": "3.1.2",
